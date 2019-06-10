@@ -6,15 +6,14 @@ export default function App () {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <Button variant="dark">LMAO</Button>
       This is a sample stateful and
       server-side rendered React application.
       <br /><br />
       Here is a button that will track how many times you click it:
       <br /><br />
-      <button onClick={() => setCount(count+1)}>
+      <Button onClick={() => setCount(count+1)} variant="dark">
         {count}
-      </button>
+      </Button>
     </div>
   );
 }

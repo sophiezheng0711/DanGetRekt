@@ -19,6 +19,7 @@ server.get('/', (req, res) => {
       </head>
       <body>
         <div id="mountNode">${initialMarkup}</div>
+        <div id="myOwnComponent"></div>
         <script src="/main.js"></script>
       </body>
     </html>
