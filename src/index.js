@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/App';
-import  LinkLabel from './components/linkLabel';
+import  MainText from './components/MainText';
+
+ReactDOM.hydrate(
+  <MainText text="Hello World!"/>,
+  document.getElementById('myOwnComponent')
+);
 
 ReactDOM.hydrate(
   <App />,
   document.getElementById('mountNode'),
 );
 
-ReactDOM.hydrate(
-  <LinkLabel />,
-  document.getElementById('myOwnComponent')
-);
