@@ -30,7 +30,7 @@ class App extends React.Component {
     }
 }
 
-export default function Puzzle2 () {
+export default function SPuzzle () {
     return (
         <App />
     );

@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Text from "./centeredText";
+import { Container, Carousel, CarouselItem } from 'react-bootstrap';
+import CarouselCaption from 'react-bootstrap/CarouselCaption';
 
 export default function Joe (props) {
   return (
@@ -9,5 +11,6 @@ export default function Joe (props) {
                     focused, but thats a little unfair. Oh well guess I'll have to settle for a number theory
                     problem instead. P.s: These numbers are a little big, it might be worthwhile to shrink
                     them into smaller pieces." title="Math, Numbers, and Algorithms" />
+    
   );
 }

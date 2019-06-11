@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 import Text from './centeredText.js';
 import {Tabs, Tab, Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
 import Joe from "./joe-puzzle";
+import SPuzzle from "./soph-puzzle";
+import { Container, Carousel} from 'react-bootstrap';
+import Primes from './primeNumberProblem.js';
 
 const hiddenB = {
     background: 'transparent',
@@ -46,6 +49,10 @@ class Home extends React.Component {
                 </Tab>
                 <Tab eventKey="puzzle1" title="Joe's Puzzle" id="joesPuzzle">
                     <Joe />
+                        
+                    <Container>
+                      <Primes />
+                    </Container>
                 </Tab>
                 <Tab eventKey="puzzle2" title="Sophie's Puzzle">
                     <SPuzzle />
