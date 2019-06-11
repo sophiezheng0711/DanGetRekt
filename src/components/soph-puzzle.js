@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Draggable from 'react-draggable';
 import {Container, Row, Col, Form, Button} from 'react-bootstrap';
+import TB from './centeredText.js';
 
 // puzzle2 is a pluggin in MainApp, therefore no navbar is needed.
 // main components needed in puzzle2: a picture hung in the background;
@@ -34,6 +35,10 @@ class App extends React.Component {
         return (
             <div>
                 <Container>
+                    <Row>
+                        <TB title=': D' text='Welcome to my puzzle! // TODO' />
+                        {/* <div>Welcome to my puzzle! // TODO</div> */}
+                    </Row>
                     <Row>
                         <Col><img src={require('./sp1.jpg')} alt='Background' /></Col>
                         <Col>
