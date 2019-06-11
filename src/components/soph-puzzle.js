@@ -19,8 +19,8 @@ class App extends React.Component {
 
     rotate() {
         let newRotation = this.state.angle + parseInt(this.state.rotation, 10);
-        if(newRotation >= 360){
-        newRotation =- 360;
+        if(newRotation > 360 || newRotation < 0){
+        newRotation %= 360;
         }
         this.state.angle = newRotation;
     }
