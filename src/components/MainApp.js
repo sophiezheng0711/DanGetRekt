@@ -37,9 +37,10 @@ class BootStrapNavbar extends React.Component {
 
 class Timer extends React.Component {
     render() {
+      let x = parseInt(this.props.time);
      return (
       <div>
-       <h1 style={{ fontSize: 40}}>{"Time elapsed: " + this.props.time + "s"}
+       <h1 style={{ fontSize: 40}}>{"Time elapsed: " + ("0"+Math.floor(x/3600)).slice(-2) + ":" + ("0" + Math.floor(x/60)%60).slice(-2) + ":" + ("0"+x % 60).slice(-2)}
        </h1>
           </div>
         );
