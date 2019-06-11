@@ -96,7 +96,7 @@ class App extends React.Component {
             ) : (<div>
                 <BootStrapNavbar time={this.state.time}/>
                 <div>
-                    <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                    <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
                         <Tab eventKey="home" title="Home">
                             <Text title="Welcome to the Intern's Puzzles!" text="Welcome to our intern puzzle page! We had 
                             a lot of fun with the boxes, and we wanted to make our own box. Unfortunately, we have absolutely
