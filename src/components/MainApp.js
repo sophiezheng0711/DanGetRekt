@@ -56,7 +56,10 @@ class Home extends React.Component {
                     
                 </Tab>
                 <Tab eventKey="puzzle4" title="Nathan's Puzzle">
-                    
+                    <Text text="Small frogs sing silently."/>
+                    <div>
+                      Hello
+                    </div>
                 </Tab>
             </Tabs>
         );
