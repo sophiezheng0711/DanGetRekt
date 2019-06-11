@@ -3,7 +3,7 @@ import { Carousel, Container } from 'react-bootstrap';
 import CaroNum from "./caroselFull";
 
 export default function Primes () {
-    const elements = ["1","2"];
+    const elements = ["92,842,061","\"156,839","844,118","3,337","21,229","989","84,098,626\"","11,122","968,208,014,697","989"];
     return (
         <Carousel>
             {elements.map((value, index) => {
