@@ -13,10 +13,8 @@ class App extends React.Component {
         this.state = {
           angle: 0,
           rotation: 0,
-          answer: '',
         }
         this.rotate = this.rotate.bind(this)
-        this.comp = this.comp.bind(this)
     }
 
     rotate() {
@@ -25,10 +23,6 @@ class App extends React.Component {
         newRotation =- 360;
         }
         this.state.angle = newRotation;
-    }
-
-    comp() {
-        console.log(this.state.answer);
     }
 
     render() {
@@ -57,22 +51,6 @@ class App extends React.Component {
                                 </Row>
                                 <Row>
                                     <Button onClick={this.rotate}>
-                                        Submit
-                                    </Button>
-                                </Row>
-                                <Row>
-                                    <Form>
-                                        <Form.Group controlId='formAns'>
-                                            <Form.Label>Your Answer</Form.Label>
-                                            <Form.Control type='ans' placeholder='Enter answer' onChange={e => this.state.answer=e.target.value} />
-                                            <Form.Text className="text-muted">
-                                                XD
-                                            </Form.Text>
-                                        </Form.Group>
-                                    </Form>
-                                </Row>
-                                <Row>
-                                    <Button onClick={this.comp}>
                                         Submit
                                     </Button>
                                 </Row>
