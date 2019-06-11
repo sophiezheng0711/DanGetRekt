@@ -19,8 +19,8 @@ class App extends React.Component {
 
     rotate() {
         let newRotation = this.state.angle + parseInt(this.state.rotation, 10);
-        if(newRotation >= 360){
-        newRotation =- 360;
+        if(newRotation > 360 || newRotation < 0){
+        newRotation %= 360;
         }
         this.state.angle = newRotation;
     }
@@ -39,20 +39,20 @@ class App extends React.Component {
                                     </Draggable>
                                 </Row>
                                 <Row>
-                                    <Form>
-                                        <Form.Group controlId='formAngle'>
-                                            <Form.Label>Rotation Angle</Form.Label>
-                                            <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
-                                            <Form.Text className="text-muted">
-                                                How many degrees clockwise would you like to rotate the scope?
-                                            </Form.Text>
-                                        </Form.Group>
-                                    </Form>
-                                </Row>
-                                <Row>
-                                    <Button onClick={this.rotate}>
-                                        Submit
-                                    </Button>
+                                    <Col>
+                                        <Form>
+                                            <Form.Group controlId='formAngle'>
+                                                <Form.Label>Rotation Angle</Form.Label>
+                                                <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
+                                                <Form.Text className="text-muted">
+                                                    How many degrees clockwise would you like to rotate the scope?
+                                                </Form.Text>
+                                            </Form.Group>
+                                        </Form>
+                                        <Button onClick={this.rotate}>
+                                            Submit
+                                        </Button>
+                                    </Col>
                                 </Row>
                             </Container>
                         </Col>
