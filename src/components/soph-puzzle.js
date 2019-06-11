@@ -49,11 +49,12 @@ class App extends React.Component {
                                         </Form.Group>
                                     </Form>
                                 </Row>
-                                <Row>
                                     <Button onClick={this.rotate}>
                                         Submit
                                     </Button>
-                                </Row>
+                                {/* <Row>
+                                    
+                                </Row> */}
                             </Container>
                         </Col>
                     </Row>
