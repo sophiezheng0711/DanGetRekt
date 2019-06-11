@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Draggable from 'react-draggable';
-import Img from 'react-image';
 
 // puzzle2 is a pluggin in MainApp, therefore no navbar is needed.
 // main components needed in puzzle2: a picture hung in the background;
@@ -12,7 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div><img src={process.env.PUBLIC_URL + 'clue2.jpg'} alt='clue2' /></div>
+                <img src={require('./sp1.jpg')} alt='Logo' />
                 <Draggable>
                     <div>I can now be moved around!</div>
                 </Draggable>
