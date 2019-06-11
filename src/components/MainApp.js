@@ -48,7 +48,7 @@ class Home extends React.Component {
                     <Joe />
                 </Tab>
                 <Tab eventKey="puzzle2" title="Sophie's Puzzle">
-                    
+                    <SPuzzle />
                 </Tab>
                 <Tab eventKey="puzzle3" title="Mahamadou's Puzzle">
                     
