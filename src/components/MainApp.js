@@ -26,27 +26,6 @@ class BootStrapNavbar extends React.Component {
     render () {
         return (
             <div>
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="#home">DanGetRekt!</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                    </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
-                    </Navbar.Collapse>
-                </Navbar>
                 <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}><Timer time={this.props.time}/></div>
             </div>
         );
@@ -67,7 +46,8 @@ class Home extends React.Component {
                     I absolutely love mathematics, and everything that has to do with the field.
                     That's why I am making my puzzle math based! If it was up to me I would have made it PDE
                     focused, but thats a little unfair. Oh well guess I'll have to settle for a number theory
-                    problem instead." title="Math, Numbers, and Algorithms" />
+                    problem instead. P.s: These numbers are a little big, it might be worthwhile to shrink
+                    them into smaller pieces." title="Math, Numbers, and Algorithms" />
                 </Tab>
                 <Tab eventKey="puzzle2" title="Sophie's Puzzle">
                     
