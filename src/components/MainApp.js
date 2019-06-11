@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
+import {Tabs, Tab, Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
 
 const hiddenB = {
     background: 'transparent',
@@ -44,48 +44,103 @@ class BootStrapNavbar extends React.Component {
                     </Form>
                     </Navbar.Collapse>
                 </Navbar>
+                <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}><Timer time={this.props.time}/></div>
             </div>
         );
     }
 }
 
-class Parent extends React.Component {
+class Home extends React.Component {
+    render () {
+        return (
+            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+                <Tab eventKey="home" title="Home">
+                    <div>
+                        // TODO: Temp placeholder.
+                    </div>
+                </Tab>
+                <Tab eventKey="puzzle1" title="Puzzle 1">
+                    
+                </Tab>
+                <Tab eventKey="puzzle2" title="Puzzle 2">
+                    
+                </Tab>
+                <Tab eventKey="puzzle3" title="Puzzle 3">
+                    
+                </Tab>
+                <Tab eventKey="puzzle4" title="Puzzle 4">
+                    
+                </Tab>
+            </Tabs>
+        );
+    }
+}
+
+class Timer extends React.Component {
+    render() {
+     return (
+      <div>
+       <h1 style={{ fontSize: 40}}>{"Time elapsed: " + this.props.time + "s"}
+       </h1>
+          </div>
+        );
+      }
+    }
+
+class App extends React.Component {
     constructor () {
         super()
         this.state = {
-          page1: true
+          page1: true,
+          time: 0,
+          hasWon: false
         }
         this.toggleHidden = this.toggleHidden.bind(this)
+        this.startTimer = this.startTimer.bind(this)
+        this.stopTimer = this.stopTimer.bind(this)
+        this.startTimer()
       }
+
+      startTimer() {
+        this.timer = setInterval(() => this.setState({
+          time: this.state.time + 1
+        }), 1000)
+      }
+
+      stopTimer() {
+        clearInterval(this.timer)
+      }
+
       toggleHidden () {
         this.setState({
           page1: !this.state.page1
         })
       }
       render () {
-        if (this.state.page1) {
-            return (
+        if (this.hasWon) {
+            this.stopTimer()
+        };
+        return (
+            this.state.page1 ? (
                 <div >
-                    <BootStrapNavbar />
+                    <BootStrapNavbar time={this.state.time}/>
                     <div>
                         <MemeHome switch={this.toggleHidden}/>
                     </div>
                 </div>
-                );
-        }
-        else {
-            return (
+            ) : (<div>
+                <BootStrapNavbar time={this.state.time}/>
                 <div>
-                    <BootStrapNavbar />
-                    <div>// TODO: space for homepage</div>
+                    <Home />
                 </div>
-                );
-        }
+            </div>
+            )
+        );
       }
 }
 
 export default function MainApp () {
   return (
-    <Parent />
+    <App />
   );
 }
