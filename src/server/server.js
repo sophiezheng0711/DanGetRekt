@@ -1,7 +1,7 @@
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import App from '../components/App';
+import App from '../components/MainApp';
 
 const server = express();
 server.use(express.static('dist'));
@@ -15,11 +15,10 @@ server.get('/', (req, res) => {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
           crossorigin="anonymous">
-        <title>Sample React App</title>
+        <title>DanGetRekt!</title>
       </head>
       <body>
         <div id="mountNode">${initialMarkup}</div>
-        <div id="myOwnComponent"></div>
         <script src="/main.js"></script>
       </body>
     </html>
