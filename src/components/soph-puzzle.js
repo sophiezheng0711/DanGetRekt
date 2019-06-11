@@ -39,22 +39,21 @@ class App extends React.Component {
                                     </Draggable>
                                 </Row>
                                 <Row>
-                                    <Form>
-                                        <Form.Group controlId='formAngle'>
-                                            <Form.Label>Rotation Angle</Form.Label>
-                                            <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
-                                            <Form.Text className="text-muted">
-                                                How many degrees clockwise would you like to rotate the scope?
-                                            </Form.Text>
-                                        </Form.Group>
-                                    </Form>
+                                    <Col>
+                                        <Form>
+                                            <Form.Group controlId='formAngle'>
+                                                <Form.Label>Rotation Angle</Form.Label>
+                                                <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
+                                                <Form.Text className="text-muted">
+                                                    How many degrees clockwise would you like to rotate the scope?
+                                                </Form.Text>
+                                            </Form.Group>
+                                        </Form>
+                                        <Button onClick={this.rotate}>
+                                            Submit
+                                        </Button>
+                                    </Col>
                                 </Row>
-                                    <Button onClick={this.rotate}>
-                                        Submit
-                                    </Button>
-                                {/* <Row>
-                                    
-                                </Row> */}
                             </Container>
                         </Col>
                     </Row>
