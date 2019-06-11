@@ -7,3 +7,4 @@ ReactDOM.hydrate(
   <App />,
   document.getElementById('mountNode'),
 );
+
