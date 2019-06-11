@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
+import SPuzzle from './soph-puzzle.js';
 
 import Text from './centeredText.js';
 import {Tabs, Tab, Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
@@ -50,7 +51,7 @@ class Home extends React.Component {
                     them into smaller pieces." title="Math, Numbers, and Algorithms" />
                 </Tab>
                 <Tab eventKey="puzzle2" title="Sophie's Puzzle">
-                    
+                    <SPuzzle />
                 </Tab>
                 <Tab eventKey="puzzle3" title="Mahamadou's Puzzle">
                     
