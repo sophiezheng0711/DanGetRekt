@@ -15,6 +15,7 @@ class App extends React.Component {
           rotation: 0,
         }
         this.rotate = this.rotate.bind(this)
+        this.reset = this.reset.bind(this)
     }
 
     rotate() {
@@ -25,6 +26,10 @@ class App extends React.Component {
         this.state.angle = newRotation;
     }
 
+    reset() {
+        this.state.angle = 0
+    }
+
     render() {
         return (
             <div>
@@ -32,6 +37,9 @@ class App extends React.Component {
                     <Row>
                         <Col><img src={require('./sp1.jpg')} alt='Background' /></Col>
                         <Col>
+                            <br></br>
+                            <div style={{color:'#126BDF', fontweight:'bold', fontSize:'28px', fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>Tool Bar</div>
+                            <br></br>
                             <Container>
                                 <Row>
                                     <Draggable>
@@ -50,7 +58,11 @@ class App extends React.Component {
                                             </Form.Group>
                                         </Form>
                                         <Button onClick={this.rotate}>
-                                            Submit
+                                            Rotate
+                                        </Button>
+                                        &nbsp; &nbsp;
+                                        <Button onClick={this.reset}>
+                                            Reset
                                         </Button>
                                     </Col>
                                 </Row>
