@@ -42,9 +42,9 @@ class App extends React.Component {
                         but a part of the word is cut off since they must run to class, and sometimes reversed 
                         because they had only one hour of sleep and do not know what they are talking about. 
                         Some students love this phrase so much that they even use it when they program. 
-                        They always say it when they complain to you, like "O, LMAO!" So you often ask 
-                        yourself, what year is it? // TODO: change the scopes to circles lol' />
-                        {/* ANSWER: "BIG RED", "1996" */}
+                        They always say it when they complain to you, like "O, LMAO!" (Hint2: answer is 4 digits) 
+                        // TODO: change the scopes to circles lol' />
+                        {/* ANSWER: "BIG RED", "3110" */}
                     </Row>
                     <Row>
                         <Col><img src={require('./sp1.png')} alt='Background' /></Col>
