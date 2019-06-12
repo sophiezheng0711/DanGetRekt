@@ -1,0 +1,26 @@
+{
+    "data": {
+        "ranking": [
+            {
+                "name": "LMAO",
+                "time": 1
+            },
+            {
+                "name": "LUL",
+                "time": 2
+            },
+            {
+                "name": "No u",
+                "time": 3
+            },
+            {
+                "name": "Patrick",
+                "time": 4
+            },
+            {
+                "name": "Spongebob",
+                "time": 5000
+            }
+        ]
+    }
+}
