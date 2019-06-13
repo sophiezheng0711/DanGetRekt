@@ -13,14 +13,39 @@ class App extends React.Component {
         super()
         this.state = {
           angle: 0,
-          rotation: 0,
         }
-        this.rotate = this.rotate.bind(this)
+        this.rotate5 = this.rotate5.bind(this)
+        this.rotate10 = this.rotate10.bind(this)
+        this.rotate20 = this.rotate20.bind(this)
+        this.rotate90 = this.rotate90.bind(this)
         this.reset = this.reset.bind(this)
     }
 
-    rotate() {
-        let newRotation = this.state.angle + parseInt(this.state.rotation, 10);
+    rotate5() {
+        let newRotation = this.state.angle + 5;
+        if(newRotation > 360 || newRotation < 0){
+        newRotation %= 360;
+        }
+        this.state.angle = newRotation;
+    }
+
+    rotate10() {
+        let newRotation = this.state.angle + 10;
+        if(newRotation > 360 || newRotation < 0){
+        newRotation %= 360;
+        }
+        this.state.angle = newRotation;
+    }
+
+    rotate20() {
+        let newRotation = this.state.angle + 20;
+        if(newRotation > 360 || newRotation < 0){
+        newRotation %= 360;
+        }
+        this.state.angle = newRotation;
+    }
+    rotate90() {
+        let newRotation = this.state.angle + 90;
         if(newRotation > 360 || newRotation < 0){
         newRotation %= 360;
         }
@@ -57,7 +82,7 @@ class App extends React.Component {
                             <Container>
                                 <Row>
                                     <Col>
-                                        <Form>
+                                        {/* <Form>
                                             <Form.Group controlId='formAngle'>
                                                 <Form.Label>Rotation Angle</Form.Label>
                                                 <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
@@ -65,17 +90,38 @@ class App extends React.Component {
                                                     How many degrees clockwise would you like to rotate the scopes?
                                                 </Form.Text>
                                             </Form.Group>
-                                        </Form>
-                                        <Button onClick={this.rotate}>
-                                            Rotate
+                                        </Form> */}
+                                        <Button onClick={this.rotate5}>
+                                            Rotate 5 degrees
                                         </Button>
-                                        &nbsp; &nbsp;
+                                    </Col>
+                                    <Col>
+                                        <Button onClick={this.rotate10}>
+                                            Rotate 10 degrees
+                                        </Button>
+                                    </Col>
+                                </Row>
+                                <br></br>
+                                <Row>
+                                    <Col>
+                                        <Button onClick={this.rotate20}>
+                                            Rotate 20 degrees
+                                        </Button>
+                                    </Col>
+                                    <Col>
+                                        <Button onClick={this.rotate90}>
+                                            Rotate 90 degrees
+                                        </Button>
+                                    </Col>
+                                </Row>
+                                <br></br>
+                                <Row>
+                                    <Col>
                                         <Button onClick={this.reset}>
                                             Reset
                                         </Button>
                                     </Col>
                                 </Row>
-                                
                             </Container>
                         </Col>
                     </Row>
