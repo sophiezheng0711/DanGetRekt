@@ -7,6 +7,7 @@ import SPuzzle from "./soph-puzzle";
 import MoPuzzle from "./mo-puzzle";
 import { Container, Carousel} from 'react-bootstrap';
 import Primes from './primeNumberProblem.js';
+import Notification from './notification.js';
 
 const hiddenB = {
     background: 'transparent',
@@ -55,7 +56,8 @@ class App extends React.Component {
           page1: true,
           time: 0,
           answer: '',
-          hasWon: false
+          hasWon: false,
+          modalShow: false 
         }
         this.toggleHidden = this.toggleHidden.bind(this)
         this.startTimer = this.startTimer.bind(this)
@@ -81,9 +83,18 @@ class App extends React.Component {
       }
 
       comp () {
-        console.log(this.state.answer);
+        var passwordHash = require('password-hash');
+        var hash = "sha1$c0d128bc$1$4cc4058edddd6aec3b8d0be44dbace5c1f69eec6"
+        //var answer = "12345";
+        
+        if(passwordHash.verify(this.state.answer ,hash)){
+          this.setState({modalShow:true});
+          this.stopTimer();
+        }
+        
       }
       render () {
+        let modalClose = () => this.setState({ modalShow: false });
         if (this.hasWon) {
             this.stopTimer()
         };
@@ -106,18 +117,26 @@ class App extends React.Component {
                             had. To solve this puzzle set you must solve all four of our puzzles (in any order), take the sum
                             of all the answers (they should be numbers, so if you get words you're doing it wrong), and then
                             add ##### to the result. That number will be the combination to the lock puzzle. Good luck!"/>
-                            <Form>
-                              <Form.Group controlId='formAns'>
-                                <Form.Label>Your Answer</Form.Label>
-                                <Form.Control type='ans' placeholder='Enter answer' onChange={e => this.state.answer=e.target.value} />
-                                <Form.Text className="text-muted">
-                                    XD
-                                </Form.Text>
-                              </Form.Group>
-                            </Form>
-                            <Button onClick={this.comp}>
-                                Submit
-                            </Button>
+                            <Container>
+                              <Form>
+                                <Form.Group controlId='formAns'>
+                                  <Form.Label>Your Answer</Form.Label>
+                                  <Form.Control type='ans' placeholder='Enter answer' onChange={e => this.state.answer=e.target.value} />
+                                  <Form.Text className="text-muted">
+                                      XD
+                                  </Form.Text>
+                                </Form.Group>
+                              </Form>
+                              
+                              <Button onClick={this.comp}>
+                                  Submit
+                              </Button>
+
+                              <Notification
+                                show={this.state.modalShow}
+                                onHide={modalClose}
+                              />
+                            </Container>
                         </Tab>
                         <Tab eventKey="puzzle1" title="Joe's Puzzle" id="joesPuzzle">
                             <Joe />

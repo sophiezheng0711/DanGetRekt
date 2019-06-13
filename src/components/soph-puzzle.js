@@ -36,21 +36,25 @@ class App extends React.Component {
             <div>
                 <Container>
                     <Row>
-                        <TB title=': D' text='Welcome to my puzzle! // TODO' />
-                        {/* <div>Welcome to my puzzle! // TODO</div> */}
+                        <TB title='Programming Is Fun!' text='Welcome to my puzzle! Fill in the blanks to complete 
+                        the hint by using the tool bar! 
+                        Hint: You can always hear depressed *** *** students say "LMAO", 
+                        but a part of the word is cut off since they must run to class, and sometimes reversed 
+                        because they had only one hour of sleep and do not know what they are talking about. 
+                        Some students love this phrase so much that they even use it when they program. 
+                        They always say it when they complain to you, like "O, LMAO!" (Hint2: answer is 4 digits) 
+                        // TODO: change the scopes to circles lol' />
+                        {/* ANSWER: "BIG RED", "3110" */}
                     </Row>
                     <Row>
-                        <Col><img src={require('./sp1.jpg')} alt='Background' /></Col>
+                        <Col><img src={require('./sp1.png')} alt='Background' /></Col>
                         <Col>
                             <br></br>
                             <div style={{color:'#126BDF', fontweight:'bold', fontSize:'28px', fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>Tool Bar</div>
                             <br></br>
+                            <div style={{color:'grey'}}>Drag the tools around the map to find hints! You could also rotate the scopes.</div>
+                            <br></br>
                             <Container>
-                                <Row>
-                                    <Draggable>
-                                        <div><img style={{transform: `rotate(${this.state.angle}deg)`}} src={require('./scope.png')} alt='Scope' /></div>
-                                    </Draggable>
-                                </Row>
                                 <Row>
                                     <Col>
                                         <Form>
@@ -58,7 +62,7 @@ class App extends React.Component {
                                                 <Form.Label>Rotation Angle</Form.Label>
                                                 <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
                                                 <Form.Text className="text-muted">
-                                                    How many degrees clockwise would you like to rotate the scope?
+                                                    How many degrees clockwise would you like to rotate the scopes?
                                                 </Form.Text>
                                             </Form.Group>
                                         </Form>
@@ -71,8 +75,26 @@ class App extends React.Component {
                                         </Button>
                                     </Col>
                                 </Row>
+                                
                             </Container>
                         </Col>
+                    </Row>
+                    <br></br>
+                    <Row>
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <Draggable>
+                                        <div><img style={{transform: `rotate(${this.state.angle}deg)`}} src={require('./scope1.png')} alt='Scope' /></div>
+                                    </Draggable>
+                                </Col>
+                                <Col>
+                                    <Draggable>
+                                        <div><img style={{transform: `rotate(${this.state.angle}deg)`}} src={require('./scope2.png')} alt='Scope' /></div>
+                                    </Draggable>
+                                </Col>
+                            </Row>
+                        </Container>
                     </Row>
                 </Container>
             </div>
