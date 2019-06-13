@@ -4,6 +4,7 @@ import Text from './centeredText.js';
 import {Tabs, Tab, Button, Navbar, Nav, NavDropdown, Form, FormControl} from 'react-bootstrap';
 import Joe from "./joe-puzzle";
 import SPuzzle from "./soph-puzzle";
+import MoPuzzle from "./mo-puzzle";
 import { Container, Carousel} from 'react-bootstrap';
 import Primes from './primeNumberProblem.js';
 
@@ -129,7 +130,7 @@ class App extends React.Component {
                             <SPuzzle />
                         </Tab>
                         <Tab eventKey="puzzle3" title="Mahamadou's Puzzle">
-                            
+                            <MoPuzzle />
                         </Tab>
                         <Tab eventKey="puzzle4" title="Nathan's Puzzle">
                             
