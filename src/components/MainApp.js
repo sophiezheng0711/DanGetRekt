@@ -7,8 +7,6 @@ import SPuzzle from "./soph-puzzle";
 import { Container, Carousel} from 'react-bootstrap';
 import Primes from './primeNumberProblem.js';
 import Notification from './notification.js';
-import LB from './leaderboard.js';
-import json from './data.json';
 
 const hiddenB = {
     background: 'transparent',
@@ -64,7 +62,6 @@ class App extends React.Component {
         this.startTimer = this.startTimer.bind(this)
         this.stopTimer = this.stopTimer.bind(this)
         this.comp = this.comp.bind(this)
-        // console.log({json})
         this.startTimer()
       }
 
@@ -155,9 +152,6 @@ class App extends React.Component {
                         </Tab>
                         <Tab eventKey="puzzle4" title="Nathan's Puzzle">
                             
-                        </Tab>
-                        <Tab eventKey="leaderboard" title="Leaderboard">
-                            <LB />
                         </Tab>
                     </Tabs>
                 </div>
