@@ -71,59 +71,60 @@ class App extends React.Component {
                         // TODO: change the scopes to circles lol' />
                         {/* ANSWER: "BIG RED", "3110" */}
                     </Row>
+                    <br></br>
+                    <Row>
+                        <br></br>
+                        <Container>
+                            <Row>
+                                <div style={{color:'#126BDF', fontweight:'bold', fontSize:'28px', fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>Tool Bar</div>
+                            </Row>
+                            <Row>
+                            <div style={{color:'grey'}}>Drag the tools around the map to find hints! You could also rotate the scopes.</div>
+                            </Row>
+                            <br></br>
+                            <Row>
+                                <Container>
+                                    <Row>
+                                        <Col>
+                                            <Button onClick={this.rotate5}>
+                                                Rotate 5 degrees
+                                            </Button>
+                                        </Col>
+                                        <Col>
+                                            <Button onClick={this.rotate10}>
+                                                Rotate 10 degrees
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                    <br></br>
+                                    <Row>
+                                        <Col>
+                                            <Button onClick={this.rotate20}>
+                                                Rotate 20 degrees
+                                            </Button>
+                                        </Col>
+                                        <Col>
+                                            <Button onClick={this.rotate90}>
+                                                Rotate 90 degrees
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                    <br></br>
+                                    <Row>
+                                        <Col>
+                                            <Button onClick={this.reset}>
+                                                Reset
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </Row>
+                        </Container>
+                        <br></br>
+                    </Row>
+                    <br></br>
                     <Row>
                         <Col><img src={require('./sp1.png')} alt='Background' /></Col>
-                        <Col>
-                            <br></br>
-                            <div style={{color:'#126BDF', fontweight:'bold', fontSize:'28px', fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>Tool Bar</div>
-                            <br></br>
-                            <div style={{color:'grey'}}>Drag the tools around the map to find hints! You could also rotate the scopes.</div>
-                            <br></br>
-                            <Container>
-                                <Row>
-                                    <Col>
-                                        {/* <Form>
-                                            <Form.Group controlId='formAngle'>
-                                                <Form.Label>Rotation Angle</Form.Label>
-                                                <Form.Control type='angle' placeholder='Enter angle in degrees' onChange={e => this.state.rotation=e.target.value} />
-                                                <Form.Text className="text-muted">
-                                                    How many degrees clockwise would you like to rotate the scopes?
-                                                </Form.Text>
-                                            </Form.Group>
-                                        </Form> */}
-                                        <Button onClick={this.rotate5}>
-                                            Rotate 5 degrees
-                                        </Button>
-                                    </Col>
-                                    <Col>
-                                        <Button onClick={this.rotate10}>
-                                            Rotate 10 degrees
-                                        </Button>
-                                    </Col>
-                                </Row>
-                                <br></br>
-                                <Row>
-                                    <Col>
-                                        <Button onClick={this.rotate20}>
-                                            Rotate 20 degrees
-                                        </Button>
-                                    </Col>
-                                    <Col>
-                                        <Button onClick={this.rotate90}>
-                                            Rotate 90 degrees
-                                        </Button>
-                                    </Col>
-                                </Row>
-                                <br></br>
-                                <Row>
-                                    <Col>
-                                        <Button onClick={this.reset}>
-                                            Reset
-                                        </Button>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </Col>
                     </Row>
                     <br></br>
                     <Row>
