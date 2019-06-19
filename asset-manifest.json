@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/DanGetRekt/static/css/main.34de6062.chunk.css",
+    "main.js": "/DanGetRekt/static/js/main.a39c5aac.chunk.js",
+    "main.js.map": "/DanGetRekt/static/js/main.a39c5aac.chunk.js.map",
+    "runtime~main.js": "/DanGetRekt/static/js/runtime~main.b94a3289.js",
+    "runtime~main.js.map": "/DanGetRekt/static/js/runtime~main.b94a3289.js.map",
+    "static/js/2.5ec3ed0e.chunk.js": "/DanGetRekt/static/js/2.5ec3ed0e.chunk.js",
+    "static/js/2.5ec3ed0e.chunk.js.map": "/DanGetRekt/static/js/2.5ec3ed0e.chunk.js.map",
+    "index.html": "/DanGetRekt/index.html",
+    "precache-manifest.e60ae1cc9549a64a14fbba75b6848212.js": "/DanGetRekt/precache-manifest.e60ae1cc9549a64a14fbba75b6848212.js",
+    "service-worker.js": "/DanGetRekt/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/DanGetRekt/static/css/main.34de6062.chunk.css.map",
+    "static/media/black.jpg": "/DanGetRekt/static/media/black.aeb4c53c.jpg",
+    "static/media/scope1.png": "/DanGetRekt/static/media/scope1.131006b7.png",
+    "static/media/scope2.png": "/DanGetRekt/static/media/scope2.db1fecb6.png",
+    "static/media/sp1.png": "/DanGetRekt/static/media/sp1.b3339c88.png"
+  }
+}
