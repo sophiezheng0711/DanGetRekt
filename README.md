@@ -9,8 +9,12 @@ A Puzzles website made by the Arena Team in response to Dan's puzzle box challen
 <br>
 
 ## Installation ##
-See 'https://jscomplete.com/learn/1rd-reactful' for missing package installation.
-**OR** Change directory to the cloned repo on your laptop, and run "npm install" on your laptop. Note that installation of Node and npm are required.
+We used create-react-app as a basis of our application.
+### Admin Installation ###
+First, clone the master branch of our repository to your laptop using command 'git clone https://github.com/sophiezheng0711/DanGetRekt'.
+Then, change directory to '.../DanGetRekt/puzzles' on your laptop, and run 'npm install'. Note that installation of Node and npm are required.
+### Client Installation ###
+Please visit our site at (// TODO). No installation is required.
 
 ## Run ##
-After missing packages are installed, run "npm run dev-server" and "npm run dev-bundle" on two separate terminals, and open 'http://localhost:4242/' on your browser.
+After missing packages are installed, run 'npm start'.
