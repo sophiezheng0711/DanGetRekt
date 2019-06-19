@@ -9,10 +9,8 @@ A Puzzles website made by the Arena Team in response to Dan's puzzle box challen
 <br>
 
 ## Installation ##
-This project was created based on this tutorial: 'https://jscomplete.com/learn/1rd-reactful', click link for reference.
-### Admin installation ###
-First, clone the repo with command 'git clone https://github.com/sophiezheng0711/DanGetRekt/'.
-Next, change directory to the cloned repo on your laptop, and run "npm install" in command-line prompt. Note that installation of Node and npm are required.
+See 'https://jscomplete.com/learn/1rd-reactful' for missing package installation.
+**OR** Change directory to the cloned repo on your laptop, and run "npm install" on your laptop. Note that installation of Node and npm are required.
 
 ## Run ##
 After missing packages are installed, run "npm run dev-server" and "npm run dev-bundle" on two separate terminals, and open 'http://localhost:4242/' on your browser.
