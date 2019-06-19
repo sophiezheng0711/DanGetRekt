@@ -62,7 +62,7 @@ class App extends React.Component {
                         but a part of the word is cut off since they must run to class, and sometimes reversed 
                         because they had only one hour of sleep and do not know what they are talking about. 
                         Some students love this phrase so much that they even use it when they program. 
-                        They always say it when they complain to you, like "O, LMAO!" (Hint2: answer is 4 digits) />
+                        They always say it when they complain to you, like "O, LMAO!" (Hint2: answer is 4 digits)' />
                     </Row>
                     <br></br>
                     <Row>
