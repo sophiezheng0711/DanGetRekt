@@ -106,7 +106,8 @@ class App extends React.Component {
                 <div>
                     <Modal
                         show = {!this.state.started}
-                        onHide = {gameStarted}>
+                        onHide = {gameStarted}
+                        centered>
                       <Modal.Header>
                         <Modal.Title>DanGetRekt</Modal.Title>
                       </Modal.Header>
