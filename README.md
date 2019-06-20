@@ -18,3 +18,6 @@ Then, change directory to '.../DanGetRekt/puzzles' on your laptop, and run 'npm 
 
 ## Run ##
 After missing packages are installed, run 'npm start'.
+
+## Deployment ##
+Every time you make changes to the master branch of the repo, make sure your local copy is up-to-date and run 'npm run deploy' to update the server. If README.md shows up instead (this file), wait a couple of minutes and check back again.
