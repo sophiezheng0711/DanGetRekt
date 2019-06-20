@@ -58,13 +58,15 @@ class App extends React.Component {
           time: 0,
           answer: '',
           hasWon: false,
-          modalShow: false 
+          modalShow: false,
+          residualTries: 5,
+          hasLost: false,
+          wrongAns: false
         }
         this.toggleHidden = this.toggleHidden.bind(this)
         this.startTimer = this.startTimer.bind(this)
         this.stopTimer = this.stopTimer.bind(this)
         this.comp = this.comp.bind(this)
-        // this.startTimer()
       }
 
       startTimer() {
@@ -92,21 +94,27 @@ class App extends React.Component {
           this.setState({modalShow:true});
           this.stopTimer();
         }
+        else {
+          this.setState({residualTries: this.state.residualTries - 1, wrongAns: true});
+          this.stopTimer();
+        }
         
       }
       render () {
         let modalClose = () => this.setState({ modalShow: false });
         let gameStarted = () => this.setState({started: true});
+        let refreshPage = () => window.location.reload();
+        let closeWrongAns = () => this.setState({wrongAns: false});
         if (this.state.started && !this.state.timerStarted) {
           this.startTimer();
           this.setState({timerStarted: true});
         };
+        if (this.state.residualTries <= 0) this.state.hasLost = true;
         return (
             this.state.page1 ? (
                 <div>
                     <Modal
                         show = {!this.state.started}
-                        onHide = {gameStarted}
                         centered>
                       <Modal.Header>
                         <Modal.Title>DanGetRekt</Modal.Title>
@@ -151,6 +159,38 @@ class App extends React.Component {
                               <Button onClick={this.comp}>
                                   Submit
                               </Button>
+
+                              <Modal
+                                show = {this.state.wrongAns}
+                                centered>
+                              <Modal.Header>
+                                <Modal.Title>Oops</Modal.Title>
+                              </Modal.Header>
+
+                              <Modal.Body>
+                                <p>Wrong Answer! You have {this.state.residualTries} {(this.state.residualTries == 1) ? "try" : "tries"} left.</p>
+                              </Modal.Body>
+
+                              <Modal.Footer>
+                                <Button onClick={closeWrongAns}>Continue</Button>
+                              </Modal.Footer>
+                            </Modal>
+
+                              <Modal
+                                show = {this.state.hasLost}
+                                centered>
+                              <Modal.Header>
+                                <Modal.Title>Oops</Modal.Title>
+                              </Modal.Header>
+
+                              <Modal.Body>
+                                <p>You have exceeded your limits! Try again next time.</p>
+                              </Modal.Body>
+
+                              <Modal.Footer>
+                                <Button onClick={refreshPage}>Restart</Button>
+                              </Modal.Footer>
+                            </Modal>
 
                               <Notification
                                 show={this.state.modalShow}
