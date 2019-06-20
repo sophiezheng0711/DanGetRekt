@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Text from './centeredText.js';
-import {Tabs, Tab, Button, Form, Container} from 'react-bootstrap';
+import {Tabs, Tab, Button, Form, Container, Modal} from 'react-bootstrap';
 import Joe from "./joe-puzzle";
 import SPuzzle from "./soph-puzzle";
 import MoPuzzle from "./mo-puzzle";
@@ -52,6 +52,8 @@ class App extends React.Component {
     constructor () {
         super()
         this.state = {
+          started: false,
+          timerStarted: false,
           page1: true,
           time: 0,
           answer: '',
@@ -62,7 +64,7 @@ class App extends React.Component {
         this.startTimer = this.startTimer.bind(this)
         this.stopTimer = this.stopTimer.bind(this)
         this.comp = this.comp.bind(this)
-        this.startTimer()
+        // this.startTimer()
       }
 
       startTimer() {
@@ -94,12 +96,30 @@ class App extends React.Component {
       }
       render () {
         let modalClose = () => this.setState({ modalShow: false });
-        if (this.hasWon) {
-            this.stopTimer()
+        let gameStarted = () => this.setState({started: true});
+        if (this.state.started && !this.state.timerStarted) {
+          this.startTimer();
+          this.setState({timerStarted: true});
         };
         return (
             this.state.page1 ? (
-                <div >
+                <div>
+                    <Modal
+                        show = {!this.state.started}
+                        onHide = {gameStarted}>
+                      <Modal.Header>
+                        <Modal.Title>DanGetRekt</Modal.Title>
+                      </Modal.Header>
+
+                      <Modal.Body>
+                        <p>Welcome to DanGetRekt, our puzzles page! Start the timer by clicking the start button, and let the games begin!</p>
+                      </Modal.Body>
+
+                      <Modal.Footer>
+                        <Button onClick={gameStarted}>Start</Button>
+                      </Modal.Footer>
+                    </Modal>
+
                     <BootStrapNavbar time={this.state.time}/>
                     <div>
                         <MemeHome switch={this.toggleHidden}/>
