@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Text from './centeredText.js';
-import {Tabs, Tab, Button, Form, Container, Modal} from 'react-bootstrap';
+import {Tabs, Tab, Button, Form, Container, Modal, Row, Col} from 'react-bootstrap';
 import Joe from "./joe-puzzle";
 import SPuzzle from "./soph-puzzle";
 import MoPuzzle from "./mo-puzzle";
@@ -40,10 +40,16 @@ class Timer extends React.Component {
     render() {
       let x = parseInt(this.props.time);
      return (
-      <div>
-       <h1 style={{ fontSize: 40}}>{"Time elapsed: " + ("0"+Math.floor(x/3600)).slice(-2) + ":" + ("0" + Math.floor(x/60)%60).slice(-2) + ":" + ("0"+x % 60).slice(-2)}
-       </h1>
-          </div>
+       <Container>
+         <Row>
+           <Col><img src={require('./pg.ico')} alt='Logo' /></Col>
+           <Col xs={3}><Container><Row><Col><br></br></Col></Row><Row><h1 style={{color:'#126BDF', fontweight:'bold', fontSize: 28, fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>{"DanGetRekt"}</h1></Row></Container></Col>
+           <Col xs={8}>
+            <h1 style={{ fontSize: 40}}>{"Time elapsed: " + ("0"+Math.floor(x/3600)).slice(-2) + ":" + ("0" + Math.floor(x/60)%60).slice(-2) + ":" + ("0"+x % 60).slice(-2)}
+            </h1>
+           </Col>
+         </Row>
+       </Container>
         );
       }
     }
