@@ -14,7 +14,7 @@ class Problem extends React.Component {
       <div className="link">
         <a href="https://leetcode.com/problems/freedom-trail/">
           {" "}
-          Squirrels and Snails{" "}
+          Eels and Eskeetilors{" "}
         </a>
         <div>
         <Text>
