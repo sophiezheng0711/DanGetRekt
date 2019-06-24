@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Text from "./centeredText";
 
 class Problem extends React.Component {
   constructor(props) {
@@ -17,8 +18,7 @@ class Problem extends React.Component {
           Eels and Eskeetilors{" "}
         </a>
         <div>
-        <Text>
-     def snakesAndLadders(board):
+        <Text text="def snakesAndLadders(board):
         if not board:
             return 0
 
@@ -85,7 +85,8 @@ class Problem extends React.Component {
             jump_counter += 1
             next_level = list()
 
-        return -1
+        return -1" title="Board">
+     
     </Text>
         </div>
       </div>
