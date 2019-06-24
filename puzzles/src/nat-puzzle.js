@@ -21,4 +21,9 @@ class Problem extends React.Component {
   }
 }
 
-ReactDOM.render(<Problem />, document.getElementById("Problem"));
+// ReactDOM.render(<Problem />, document.getElementById("Problem"));
+export default function NPuzzle () {
+  return (
+      <Problem />
+  );
+}

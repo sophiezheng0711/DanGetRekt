@@ -7,6 +7,7 @@ import SPuzzle from "./soph-puzzle";
 import MoPuzzle from "./mo-puzzle";
 import Primes from './primeNumberProblem.js';
 import Notification from './notification.js';
+import NPuzzle from './nat-puzzle';
 
 const hiddenB = {
     background: 'transparent',
@@ -218,7 +219,7 @@ class App extends React.Component {
                             <MoPuzzle />
                         </Tab>
                         <Tab eventKey="puzzle4" title="Nathan's Puzzle">
-                            
+                            <NPuzzle />
                         </Tab>
                     </Tabs>
                 </div>
