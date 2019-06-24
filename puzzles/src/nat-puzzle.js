@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-class MyApp extends React.Component {
-    render() {
-        return <h6>Hot dog, on a frog, dancing on the log, absolution</h6>;
-    }
+class Problem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    };
+  }
+
+  render() {
+    return (
+      <div className="link">
+        <a href="https://leetcode.com/problems/freedom-trail/">
+          {" "}
+          Squirrels and Snails{" "}
+        </a>
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(
-  <MyApp />,
-  document.getElementById('mountNode'),
-);
+ReactDOM.render(<Problem />, document.getElementById("Problem"));
