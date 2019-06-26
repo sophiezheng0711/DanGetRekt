@@ -158,7 +158,7 @@ class App extends React.Component {
                                   <Form.Label>Your Answer</Form.Label>
                                   <Form.Control type='ans' placeholder='Enter answer' onChange={e => this.state.answer=e.target.value} />
                                   <Form.Text className="text-muted">
-                                      XD
+                                      Are you sure? You only have {this.state.residualTries} {(this.state.residualTries == 1) ? "try" : "tries"} left.
                                   </Form.Text>
                                 </Form.Group>
                               </Form>

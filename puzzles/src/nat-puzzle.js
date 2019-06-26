@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {Button, ButtonToolbar, Container, Row, Col} from 'react-bootstrap';
 import Text from "./centeredText";
 
 class Problem extends React.Component {
@@ -8,15 +8,17 @@ class Problem extends React.Component {
     this.state = {
       value: null
     };
+    this.renderRedirect = this.renderRedirect.bind(this);
+  }
+
+  renderRedirect() {
+    window.open('https://leetcode.com/problems/freedom-trail/');
   }
 
   render() {
     return (
-      <div className="link">
-        <a href="https://leetcode.com/problems/freedom-trail/">
-          {" "}
-          Eels and Eskeetilors{" "}
-        </a>
+      <div>
+        <br></br>
         <div>
         <Text text="    int find_first_of(vector<int>& nums, int target){
         if(nums.size() == 0){ return -1; }
@@ -76,6 +78,20 @@ class Problem extends React.Component {
     }" title="Board">
      
     </Text>
+        <Container>
+          <Row>
+            <Col></Col>
+            <Col>
+              <ButtonToolbar>
+                <Button onClick={this.renderRedirect} block>
+                  Eels and Eskeetilors
+                </Button>
+              </ButtonToolbar>
+            </Col>
+            <Col></Col>
+          </Row>
+        </Container>
+        <br></br>
         </div>
       </div>
     );
