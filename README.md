@@ -12,6 +12,7 @@ A Puzzles website made by the Arena Team in response to Dan's puzzle box challen
 We used create-react-app as a basis of our application.
 ### Client Installation ###
 Please visit our site at 'https://sophiezheng0711.github.io/DanGetRekt/'. No installation is required. For your user experience, please do not attempt to look through our src code to find the answer to the puzzles. This will take out the fun of the puzzles and ruin the game for both you and other users. Thank you, and have fun!
+To inhance visual experience, please open your browser to full screen while solving the puzzles.
 ### Admin Installation ###
 First, clone the master branch of our repository to your laptop using command 'git clone https://github.com/sophiezheng0711/DanGetRekt'.
 Then, change directory to '.../DanGetRekt/puzzles' on your laptop, and run 'npm install'. Note that installation of Node and npm are required.
