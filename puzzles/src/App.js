@@ -94,8 +94,7 @@ class App extends React.Component {
 
       comp () {
         var passwordHash = require('password-hash');
-        var hash = "sha1$c0d128bc$1$4cc4058edddd6aec3b8d0be44dbace5c1f69eec6"
-        //var answer = "12345";
+        var hash = "sha1$86edbdae$1$dd71acb0ffd60f7e05b6133b4427e1b3aec0b4f5"
         
         if(passwordHash.verify(this.state.answer ,hash)){
           this.setState({modalShow:true});
@@ -149,9 +148,9 @@ class App extends React.Component {
                             <Text title="Welcome to the Intern's Puzzles!" text="Welcome to our intern puzzle page! We had 
                             a lot of fun with the boxes, and we wanted to make our own box. Unfortunately, we have absolutely
                             no woodworking skills, only programming skills. As you can see we had to make do with what we
-                            had. To solve this puzzle set you must solve all four of our puzzles (in any order), take the sum
-                            of all the answers (they should be numbers, so if you get words you're doing it wrong), and then
-                            add ##### to the result. That number will be the combination to the lock puzzle. Good luck!"/>
+                            had. To solve this puzzle set you must solve all four of our puzzles (in any order), and perform the
+                            following operations: Add Mahamadou's answer with the product of Joe and Sophie's answers added
+                            to Nathan's answer cubed. That number will the answer you place in the text box. Good luck!"/>
                             <Container>
                               <Form>
                                 <Form.Group controlId='formAns'>
