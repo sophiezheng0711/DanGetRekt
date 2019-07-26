@@ -43,7 +43,7 @@ class Timer extends React.Component {
      return (
        <Container>
          <Row>
-           <Col><img src={require('./pg.ico')} alt='Logo' /></Col>
+           <Col><img src={require('./pg.ico')} style={{width: '60px', height: '60px', objectFit: 'cover'}} alt='Logo' /></Col>
            <Col xs={3}><Container><Row><Col><br></br></Col></Row><Row><h1 style={{color:'#126BDF', fontweight:'bold', fontSize: 28, fontFamily:'Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif'}}>{"DanGetRekt"}</h1></Row></Container></Col>
            <Col xs={8}>
             <h1 style={{ fontSize: 40}}>{"Time elapsed: " + ("0"+Math.floor(x/3600)).slice(-2) + ":" + ("0" + Math.floor(x/60)%60).slice(-2) + ":" + ("0"+x % 60).slice(-2)}
